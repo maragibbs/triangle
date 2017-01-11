@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>enter three side lengths to see if they form a triangle</p>    
+<form >
+    
+    <input type="number" id="A"><br>
+    <input type="number" id="B"><br>
+    <input type="number" id="C"><br>
+   
+    <button type="button" onclick="o.value=isTriangle()"> submit </button>
+<!--    <input type="submit" value="submit"><br>-->
+    
+    <output name="o"></output><br>
+           
+</form>
+
+<script>
+    
+    
+function isTriangle() {
+        
+        var a = parseInt(document.getElementById('A').value);
+        var b= parseInt(document.getElementById('B').value);
+        var c=parseInt(document.getElementById('C').value);
+    
+        var ab = a+b;
+        var bc=b+c;
+        var ac = a+c;
+        var b1=ab>c;
+        var b2=bc>a;
+        var b3=ac>b;
+    
+        //console.log();
+        
+        if (isNaN(a)||isNaN(b)||isNaN(c)) {
+            return "finish entering inputs"
+        }
+        else if (b1 && b2 && b3) {
+             return "yes";
+        } else {
+             return "no";
+        }
+    }
+    
+    
+    
+</script>
+
+</body>
+</html>
